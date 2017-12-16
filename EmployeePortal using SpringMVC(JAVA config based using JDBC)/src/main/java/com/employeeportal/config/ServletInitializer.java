@@ -18,6 +18,10 @@ import javax.sql.DataSource;
 @EnableWebMvc
 @ComponentScan(basePackages = "com.employeeportal")
 public class ServletInitializer extends WebMvcConfigurerAdapter {
+    private final String driverClassName = "com.mysql.jdbc.Driver";
+    private final String url = "jdbc:mysql://localhost:3306/Organization";
+    private final String username = "root";
+    private final String password = "Spacex@123";
 
     @Bean
     public ViewResolver viewResolver() {
@@ -31,10 +35,10 @@ public class ServletInitializer extends WebMvcConfigurerAdapter {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/Organization");
-        dataSource.setUsername("root");
-        dataSource.setPassword("Spacex@123");
+        dataSource.setDriverClassName(driverClassName);
+        dataSource.setUrl(url);
+        dataSource.setUsername(username);
+        dataSource.setPassword(password);
         return dataSource;
     }
 

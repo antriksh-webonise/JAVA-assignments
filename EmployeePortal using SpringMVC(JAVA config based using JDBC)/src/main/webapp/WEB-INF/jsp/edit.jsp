@@ -16,7 +16,7 @@
 
 
 <h1>Edit Employee</h1>
-<form:form method="POST" action="/editsave">
+<form:form method="POST" action="/edit">
     <table >
         <tr>
             <td>ID  :</td>
@@ -40,7 +40,7 @@
         </tr>
         <tr>
             <td> </td>
-            <td><input type="submit" value="Edit Save" /></td>
+            <td><input type="submit" value="Save" /></td>
         </tr>
     </table>
 </form:form>
